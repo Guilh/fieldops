@@ -20,4 +20,3 @@ cd services/scheduling
 pnpm typecheck
 pnpm test
 ```
-# fieldops
