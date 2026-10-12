@@ -1,0 +1,1 @@
+Reminder: your fieldops technician visit is on {{startsAtLocal}}. Reply C to cancel.

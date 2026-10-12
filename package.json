@@ -1,0 +1,15 @@
+{
+  "name": "fieldops",
+  "private": true,
+  "packageManager": "pnpm@10.34.5",
+  "engines": {
+    "node": ">=22.5"
+  },
+  "scripts": {
+    "codegen": "openapi-typescript packages/shared/openapi.yaml -o packages/shared/generated/api.ts"
+  },
+  "devDependencies": {
+    "openapi-typescript": "7.13.0",
+    "typescript": "5.9.3"
+  }
+}

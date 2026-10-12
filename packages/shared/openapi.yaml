@@ -1,0 +1,44 @@
+openapi: 3.1.0
+info:
+  title: fieldops API
+  version: 2.3.0
+paths: {}
+components:
+  schemas:
+    AppointmentStatus:
+      type: string
+      enum: [scheduled, in_progress, completed, cancelled]
+    Appointment:
+      type: object
+      required: [id, technicianId, customerId, startsAt, endsAt, status, customerTimeZone]
+      properties:
+        id:
+          type: string
+        technicianId:
+          type: string
+        customerId:
+          type: string
+        startsAt:
+          type: string
+          format: date-time
+          description: Start of the visit, in UTC.
+        endsAt:
+          type: string
+          format: date-time
+          description: End of the visit, in UTC.
+        status:
+          $ref: "#/components/schemas/AppointmentStatus"
+        customerTimeZone:
+          type: string
+          description: IANA time zone of the customer, for display only.
+    Invoice:
+      type: object
+      required: [id, appointmentId, amountCents]
+      properties:
+        id:
+          type: string
+        appointmentId:
+          type: string
+        amountCents:
+          type: integer
+          description: Invoice total in integer cents.
