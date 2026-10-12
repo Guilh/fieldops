@@ -30,7 +30,7 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - uses: anthropics/claude-code-action@v1
         with:
-          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           claude_args: |
             --allowedTools "Bash(pnpm typecheck *),Bash(pnpm test *)"
             --max-turns 50
